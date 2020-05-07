@@ -1,4 +1,4 @@
-let num = 99;
+/* let num = 99;
 
 if (num < 49) {
     console.log("Неверно!")
@@ -20,4 +20,22 @@ switch (num) {
     case 99:
         console.log("Верно!");
         break;
+} */
+//Ц И К Л Ы
+let nom = 50;
+/* while (nom < 55) {
+    console.log(nom);
+    nom++;
+} */
+/* do {
+    console.log(nom);
+    nom++;
+}
+while (nom < 55); */
+
+for ( let i = 1; i < 15; i++) {
+    if (i > 11) {
+        break
+    }
+    console.log(i)
 }
