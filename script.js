@@ -22,7 +22,7 @@ switch (num) {
         break;
 } */
 //Ц И К Л Ы
-let nom = 50;
+/* let nom = 50; */
 /* while (nom < 55) {
     console.log(nom);
     nom++;
@@ -33,9 +33,9 @@ let nom = 50;
 }
 while (nom < 55); */
 
-for ( let i = 1; i < 15; i++) {
+/* for ( let i = 1; i < 15; i++) {
     if (i > 11) {
         break
     }
     console.log(i)
-}
+} */
