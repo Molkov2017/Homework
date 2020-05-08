@@ -39,3 +39,11 @@ while (nom < 55); */
     }
     console.log(i)
 } */
+let num = 25;
+function showFirstMessage (text) {
+    alert(text);
+    let num = 20;
+    console.log(num);
+}
+showFirstMessage("Привет кожаный ублюдок!");
+console.log(num);
