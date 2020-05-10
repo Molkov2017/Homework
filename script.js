@@ -1,49 +1,43 @@
-/* let num = 99;
+'use strict';
+/* Задание на урок:
 
-if (num < 49) {
-    console.log("Неверно!")
-} else if (num > 100) {
-    console.log("Очень большое число")
-} else {
-    console.log("Верно!")
-}
+1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
 
-(num > 100) ? console.log("Верно!") : console.log("Неверно!");
+2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
+возвращаем пользователя к вопросам опять
 
-switch (num) {
-    case num < 49:
-        console.log('Неверно!');
-        break;
-    case num > 100:
-        console.log('Очень большое число!');
-        break;
-    case 99:
-        console.log("Верно!");
-        break;
-} */
-//Ц И К Л Ы
-/* let nom = 50; */
-/* while (nom < 55) {
-    console.log(nom);
-    nom++;
-} */
-/* do {
-    console.log(nom);
-    nom++;
-}
-while (nom < 55); */
+3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
+"Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
+"Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
 
-/* for ( let i = 1; i < 15; i++) {
-    if (i > 11) {
-        break
+4) Потренироваться и переписать цикл еще двумя способами*/
+
+// Код возьмите из предыдущего домашнего задания
+
+const numberOfFilms = prompt("Сколько фильмов Вы уже посмотрели?", "");
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+for (let i = 0; i < 2; i++) {
+    const a = prompt("Какой фильм Вы посмотрели последним?", ""),
+        b = prompt("Оцените его по десятибальной шкале", "");
+
+    if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+    } else {
+        i--;
     }
-    console.log(i)
-} */
-let num = 25;
-function showFirstMessage (text) {
-    alert(text);
-    let num = 20;
-    console.log(num);
+    if (personalMovieDB.count < 10) {
+        console.log("Просмотрено мало фильмов", "");
+    } else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
+        console.log("Вы - классический зритель");
+    } else if (personalMovieDB.count > 30) {
+        console.log("Вы киноман");
+    }
 }
-showFirstMessage("Привет кожаный ублюдок!");
-console.log(num);
+console.log(personalMovieDB);
